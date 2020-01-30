@@ -1,0 +1,89 @@
+<html lang="pt-br">
+
+<head>
+    <title>Aula Javascript</title>
+    <meta charset="UTF-8" />
+    <style>
+        #titulo {
+            color: red;
+        }
+
+        #display {
+            border: 1px solid;
+            width: 200px;
+            padding: 8px;
+            background-color: silver;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: right;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="titulo">Aula 2</h1>
+        <h1 id="titulo2">Subtítulo</h1>
+        <h1 id="sub">Sub</h1>
+        <h1 id="altera">Cor Escolhida</h1>
+        <button onclick="foco()">Pop-Up</button>
+        <br>
+        <br>
+        <button onclick="cor()">Azul</button>
+        <br>
+        <br>
+        <input id="texto" type="text">
+        <button onclick="nova()">Altera</button>
+        <hr>
+        <div>
+            <h1>Calculadora</h1>
+            <div id="display">
+                0
+            </div>
+            <div>
+                Val:1
+                <input type="text" id="val1">
+                <br><br>
+                Val:2
+                <input type="text" id="val2">
+                <br><br>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function foco() {
+            window.alert("Você me apertou!");
+        }
+
+        function cor() {
+            var el = document.getElementById("titulo2");
+            el.style.color = "blue";
+        }
+        var sub = document.getElementById("sub");
+        sub.style.color = "gold";
+
+        function nova() {
+            var ncor = document.getElementById("texto");
+            var texto = ncor.value;
+            console.log(texto);
+
+            var ncor2 = document.getElementById("altera");
+            ncor2.style.color = texto;
+        }
+        function calcular()
+        {
+            var v1id = document.getElementById("val1");
+            var v2id = document.getElementById("val2");
+            var v1 = parseInt(v1id.value);
+            var v2 = parseInt(v2id.value);
+            var soma = (v1 + v2);
+            console.log(soma);
+
+            var resultado = document.getElementById("display").innerHTML=soma;
+        }
+    </script>
+</body>
+
+</html>
