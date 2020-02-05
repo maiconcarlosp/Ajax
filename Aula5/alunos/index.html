@@ -1,0 +1,97 @@
+<html lang="pt-br">
+<header>
+    <title>Aula 5</title>
+    <meta charset="UTF-8" />
+    <style>
+        label {
+            width: 100px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        table {
+            margin-top: 40px;
+            border: 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        tr th {
+            border: 1px solid;
+            padding: 6px;
+        }
+
+        tr td {
+            border: 1px solid;
+            padding: 6px;
+        }
+
+        thead {
+            background-color: burlywood;
+        }
+        #cadastrar{
+            width: 100px;
+            height: 40px;
+        }
+        .periodo{
+            width: 180px;
+        }
+    </style>
+
+</header>
+
+<body>
+    <h1>Cadastro de Alunos</h1>
+
+    <fieldset class="tabela">
+        <label>Nome</label>
+        <input type="text" id="nome">
+        <br>
+        <label>Email</label>
+        <input type="text" id="email">
+        <br>
+        <label>Telefone</label>
+        <input type="text" id="telefone">
+        <br>
+        <label>Sexo</label>
+        <input type="radio" name="sexo" value="M">Masculino
+        <input type="radio" name="sexo" value="F">Feminino
+        <br>
+        <label>Periodo</label>
+        <select class="periodo">
+            <option value="0">--Selecione--</option>
+            <option value="1">Manhã</option>
+            <option value="2">Tarde</option>
+            <option value="3">Noite</option>
+        </select>
+        <br>
+        <br>
+        <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+    </fieldset>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Sexo</th>
+                <th>Periodo</th>
+            </tr>
+        </thead>
+        <tbody id="lista">
+            <tr>
+                <td>Pedro Paulo</td>
+                <td>pedro@paulo.com</td>
+                <td>11-13224687</td>
+                <td>Masculino</td>
+                <td>Noturno</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

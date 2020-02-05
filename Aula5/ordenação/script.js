@@ -28,31 +28,44 @@ function botao() {
     if (igual >= 0) {
         window.alert("A cidade já foi cadastrada!");
     } else {
-        window.alert("Cidade adicionada!");
+        // window.alert("Cidade adicionada!");
         lista.innerHTML += "<li>" + cidade + "</li>";
         listacidades.push(cidade);
-        // Apos inserido limpa o campo
     }
+    // Apos inserido limpa o campo
     texto.value = " ";
 }
-var listacidades = [];
+var listacidades = ["Curitiba", "Campo Largo", "Colombo"];
+// var listacidades = [cidades];
 
 function imprime() {
     var lista = document.getElementById("lista");
-    // var cidades = ["Curitiba", "Campo Largo", "Colombo"];
-    var cidades = [cidade];
+    //var cidades = ["Curitiba", "Campo Largo", "Colombo"];
+    // var cidades = [cidade];
     // console.log(cidades);
-    lista.innerHTML="";
-    var ult = cidades.length - 1;
-    for (var idx = 0; idx <= ult; idx += 1){
+    lista.innerHTML = "";
+    var ult = listacidades.length - 1;
+    for (var idx = 0; idx <= ult; idx += 1) {
         // console.log(cidades[idx]);
-        lista.innerHTML+="<li>"+cidades[idx]+"</li>";
+        lista.innerHTML += "<li>" + listacidades[idx] + "</li>";
     }
     // for (var idx=ult; idx=0; idx-=1){
     //     console.log(cidades[idx]);
     //     lista.innerHTML+="<li>"+cidades[idx]+"</li>";
     // }
 }
+
+function crescente() {
+    listacidades.sort();
+    imprime();
+}
+
+function inverte() {
+    listacidades .reverse();
+    imprime();
+}
+
+
 
 // array
 // var cidades = new Array("Curitiba", "Pinhais", "Colombo");

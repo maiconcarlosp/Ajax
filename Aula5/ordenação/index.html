@@ -1,0 +1,53 @@
+<html lang="pt-br">
+<header>
+    <title>Aula 5</title>
+    <meta charset="UTF-8" />
+    <style>
+        #letreiro {
+            background-color: black;
+            color: white;
+            font-size: xx-large;
+            font-family: monospace;
+            padding: 12px;
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #ligar {
+            width: 100px;
+            height: 50px;
+        }
+        #desligar {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</header>
+
+<body>
+    <h1>Funções</h1>
+    <h2>Letreiro</h2>
+    <div id="letreiro">Próxima parada: Estação Colombo...  </div>
+    <br><br>
+    <button id="ligar" onclick="ligar()">Ligar</button>
+    <button id="desligar" onclick="desligar()">Desligar</button>
+
+    <h2>Cidades</h2>
+    <fieldset>
+        <input id="texto" type="text" />
+        <button onclick="botao()">Adicionar</button>
+        <button onclick="imprime()">Imprimir</button>
+        <button onclick="crescente()">Crescente</button>
+        <button onclick="inverte()">Inverte</button>
+    </fieldset>
+    <h2>Cidades</h2>
+
+    <ul id="lista">
+        
+    </ul>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
