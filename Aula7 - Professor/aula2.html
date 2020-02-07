@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />
+        
+        <style>
+            
+            #titulo {
+                color: red;
+            }
+
+            #display {
+                border: 1px solid;
+                width: 200px;
+                padding: 8px;
+                background-color: silver;
+                margin-bottom: 20px;
+                text-align: right;
+                font-family: monospace;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h1 id="titulo">Aula 2</h1>
+        <h1 id="sub" >subtituilo</h1>
+
+        <button onClick="cor()">Clique aqui</button>
+
+        <br> <br>
+
+        <input type="text" id="texto">
+        <button onclick="altera()">Altera</button>
+
+        <hr>
+        <h1>Calculadora</h1>
+
+        <div id="display">
+            0
+        </div>
+
+        Val: 1
+        <input type="text" id="val1">
+        <br><br>
+
+        Val 2
+        <input type="text" id="val2">
+
+        <br><br>
+        <button>Calcular</button>
+
+
+        <script>
+
+            // função para alterar co do h1
+            function cor()
+            {
+                var el = document.getElementById("titulo");
+                el.style.color = "blue";
+            }
+
+            // altera a cor do subtitulo
+            function altera()
+            {
+                var el = document.getElementById("texto");
+                var texto = el.value;
+
+                var sub = document.getElementById("sub");
+                sub.style.color = texto;
+                
+            }
+ 
+        </script>
+    </body>
+</html>
