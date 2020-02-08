@@ -1,94 +1,113 @@
 <html>
-    <head>
-        <title>Aula JS</title>
-        <meta charset="utf-8" />   
 
-        <style>
-            label{ 
-                width: 100px;
-                display: inline-block;
+<head>
+    <title>Aula JS</title>
+    <meta charset="utf-8" />
 
-            }
-            table {
-                margin-top: 40px;
-                border: 1px solid;
-                border-collapse: collapse;
-            }
-            th, td {
-                border: 1px solid;
-                padding: 6px;
-            }
-            thead {
-                background-color: silver;
-            }
-        </style>
+    <style>
+        label {
+            width: 100px;
+            display: inline-block;
 
-        <script src="jquery-3.4.1.js"></script>
+        }
 
-    </head>
+        table {
+            margin-top: 40px;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
 
-    <body>
-        <h1>Cadastro de Alunos</h1>
+        th,
+        td {
+            border: 1px solid;
+            padding: 6px;
+        }
 
-        <fieldset>
-            <label>Nome</label>
-            <input type="text" id="nome" />
-            <br>
+        thead {
+            background-color: silver;
+        }
+        #msgalert{
+            color:red;
+            border: 2px solid;
+            padding: 4px;
+            margin: 6px 0;
+            /* text-align: center; */
+            display: none;
+        }
+        .erro{
+            color: red;
+            border: 2px solid;
+        }
+    </style>
 
-            <label>Email</label>
-            <input type="text" id="email"/>
-            <br>
+<script src="jquery-3.4.1.js"></script>
+<script src="jquery.mask.min.js"></script>
+<script src="alunos.js"></script>
 
-            <label>Telefone</label>
-            <input type="text" id="telefone"/>
-            <br>
+</head>
 
-            <label>Sexo</label>
-            <input type="radio" name="sexo" value="M" />Masculino
-            <input type="radio" name="sexo" value="F" />Feminino
-            <br>
+<body>
+    <h1>Cadastro de Alunos</h1>
 
-            <label>Periodo</label>
-            <select id="periodo">
-                <option value="0">-- Selecione --</option>
-                <option value="1">Manhã</option>
-                <option value="2">Tarde</option>
-                <option value="3">Noite</option>
-            </select>
-            <br>
+    <fieldset>
+        <ul id="msgalert"><b></b></ul>
+        <label>Nome</label>
+        <input type="text" id="nome" class="removerror"/>
+        <br>
 
-            <button id="btn-cadastrar">Cadastrar</button>
-        </fieldset>
+        <label>Email</label>
+        <input type="text" id="email" class="removerror"/>
+        <br>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>Sexo</th>
-                    <th>Periodo</th>
-                </tr>
-            </thead>
-            <tbody id="alunos">
-                <tr>
-                    <td>Pedro Paulo</td>
-                    <td>pedro@paulo.com</td>
-                    <td>11-1234-1234</td>
-                    <td>Masculino</td>
-                    <td>Noturno</td>
-                </tr>
-                <tr>
-                    <td>Pedro Paulo</td>
-                    <td>pedro@paulo.com</td>
-                    <td>11-1234-1234</td>
-                    <td>Masculino</td>
-                    <td>Noturno</td>
-                </tr>
-            </tbody>
-        </table>
+        <label>Telefone</label>
+        <input type="text" id="telefone" class="removerror"/>
+        <br>
 
-        <script src="alunos.js"></script>
-    </body>
+        <label id="sexo" class="removerror">Sexo</label>
+        <input type="radio" name="sexo" value="M" />Masculino
+        <input type="radio" name="sexo" value="F" />Feminino
+        <br>
+
+        <label>Periodo</label>
+        <select id="periodo" class="removerror">
+            <option value="0">-- Selecione --</option>
+            <option value="1">Manhã</option>
+            <option value="2">Tarde</option>
+            <option value="3">Noite</option>
+        </select>
+        <br>
+
+        <button id="btn-cadastrar">Cadastrar</button>
+    </fieldset>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Sexo</th>
+                <th>Periodo</th>
+            </tr>
+        </thead>
+        <tbody id="alunos">
+            <tr>
+                <td>Pedro Paulo</td>
+                <td>pedro@paulo.com</td>
+                <td>11-1234-1234</td>
+                <td>Masculino</td>
+                <td>Noturno</td>
+            </tr>
+            <tr>
+                <td>Pedro Paulo</td>
+                <td>pedro@paulo.com</td>
+                <td>11-1234-1234</td>
+                <td>Masculino</td>
+                <td>Noturno</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
 
 </html>
