@@ -38,6 +38,14 @@
             color: red;
             border: 2px solid;
         }
+        .btn-del{
+            color: red;
+            cursor: pointer;
+            border: 1px solid;
+        }
+        .btn-del:hover{
+            border: 2px solid;
+        }
     </style>
 
 <script src="jquery-3.4.1.js"></script>
@@ -88,6 +96,7 @@
                 <th>Telefone</th>
                 <th>Sexo</th>
                 <th>Periodo</th>
+                <th>Remover</th>
             </tr>
         </thead>
         <tbody id="alunos">
@@ -97,6 +106,7 @@
                 <td>11-1234-1234</td>
                 <td>Masculino</td>
                 <td>Noturno</td>
+                <td><span class="btn-del">[X]</span></td>
             </tr>
         
             </tr>

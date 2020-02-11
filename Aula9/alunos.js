@@ -112,6 +112,7 @@ $(document).ready(function(){
             +"<td>"+ telefone +"</td>"
             +"<td>"+ sexo_rotulo +"</td>"
             +"<td>"+ vetor_periodos[periodo] + "</td>"
+            +'<td><span class="btn-del">[X]</span></td>'
             +"</tr>";
 
         $("#alunos").append(linha);
@@ -123,8 +124,21 @@ $(document).ready(function(){
 
     }); //fim do click
 
-    $("#telefone").mask("(00)90000-0000");
 
+    // código remover linha
+    // o Js roda apenas uma vez no incio da aplicação, então precisa ser solicitado novamente pois nesse caso nao funciona
+    // $(".btn-del").click(function(){
+    //     console.log(this);
+    //     $(this).parent().parent().remove();
+    // }); 
+    //fim remover linha
+
+    $("#alunos").on("click", ".btn-del", function(){
+        $(this).parent().parent().remove();
+    }); //monitora a tabela, permitindo que seja inserido novos botões de remoção
+
+
+    $("#telefone").mask("(00)90000-0000");
 
 
     // $("#telefone").keydown(function(ev){
