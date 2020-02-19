@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />   
+
+        <style>
+            label{ 
+                width: 100px;
+                display: inline-block;
+
+            }
+            table {
+                margin-top: 40px;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid;
+                padding: 6px;
+            }
+            thead {
+                background-color: silver;
+            }
+
+            #msg-alert {
+                color: red;
+                border: 1px solid;
+                padding: 6px;
+                margin: 6px 0;
+                display: none;
+            }
+            .erro {
+                color: red;
+                border: 1px solid;
+            }
+            .btn-del {
+                color: red;
+                cursor: pointer;
+            }
+            .btn-del:hover {
+                border: 1px solid;
+            }
+        </style>
+
+        <script src="jquery-3.4.1.js"></script>
+        <script src="jquery.mask.min.js"></script>
+        <script src="alunos.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Cadastro de Alunos</h1>
+
+        <fieldset>
+
+            <ul id="msg-alert"></ul>
+
+            <label>Nome</label>
+            <input type="text" id="nome" />
+            <br>
+
+            <label>Email</label>
+            <input type="text" id="email" value="abc@abc.com"/>
+            <br>
+
+            <label>Telefone</label>
+            <input type="text" id="telefone"/>
+            <br>
+
+            <label>Sexo</label>
+            <input type="radio" name="sexo" value="M"  />Masculino
+            <input type="radio" name="sexo" value="F"  />Feminico
+            <br>
+
+            <label>Periodo</label>
+            <select id="periodo">
+                <option value="0">-- Selecione --</option>
+                <option value="1">Manhã</option>
+                <option value="2">Tarde</option>
+                <option value="3">Noite</option>
+            </select>
+            <br>
+
+            <button id="btn-cadastrar">Cadastrar</button>
+        </fieldset>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Sexo</th>
+                    <th>Periodo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="alunos">
+                <tr>
+                    <td>Pedro Paulo</td>
+                    <td>pedro@paulo.com</td>
+                    <td>11-1234-1234</td>
+                    <td>Masculino</td>
+                    <td>Noiturno</td>
+                    <td><span class="btn-del">[X]</span></td>
+                </tr>
+                <tr>
+                    <td>Pedro Paulo</td>
+                    <td>pedro@paulo.com</td>
+                    <td>11-1234-1234</td>
+                    <td>Masculino</td>
+                    <td>Noiturno</td>
+                    <td><span class="btn-del">[X]</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+    </body>
+
+</html>

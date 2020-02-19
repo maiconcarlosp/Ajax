@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />   
+        
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <script src="listagem.js"></script>
+
+        <style>
+         h1 {
+            display: inline-block;
+         }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+        <h1>Agenda de Contatos</h1>
+
+        <button id="carregar" class="btn btn-success">Carregar</button>
+
+        <fieldset>
+            <label>Nome</label>
+            <input type="text" id="nome" />
+            <br>
+            <label>Email</label>
+            <input type="text" id="email" />
+
+            <button id="enviar">Enviar</button>
+        </fieldset>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+
+            <tbody id="conteudo">
+                <tr>
+                    <td>Aluno da silva</td>
+                    <td>silva@aluno.com</td>
+                    <td>(11)2222-3333</td>
+                    <td>Curitiba</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    </body>
+</html>    
